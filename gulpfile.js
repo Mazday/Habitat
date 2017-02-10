@@ -19,6 +19,7 @@ var yargs = require("yargs").argv;
 module.exports.config = config;
 
 gulp.task("default", function (callback) {
+  process.env['ProgramFiles(x86)'] = 'D:\\Program Files (x86)\\'
   config.runCleanBuilds = true;
   return runSequence(
     "01-Copy-Sitecore-License",
